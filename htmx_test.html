@@ -20,12 +20,15 @@
 </head>
 <body>
     <div class="center">
-        <button class="btn-green" hx-trigger="click" hx-get="/addMessage" hx-target="#message"
+        <button class="btn-green" hx-trigger="click" hx-get="https://phind.com" hx-target="#status"
             hx-swap="outerHTML">Click Me</button>
         <button class="btn-green" hx-on="click: alert('clicked')">Alert Me</button>
     </div>
     <ul id="message">
         <li>Initial message</li>
     </ul>
+    <div id="status">
+        <p>Initial status</p>
+    </div>
 </body>
 </html>
