@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World Example</title>
+    <script src="https://unpkg.com/htmx.org@1.9.3/dist/htmx.js"></script>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+        .btn-green {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <button class="btn-green" hx-trigger="click" hx-get="/addMessage" hx-target="#message"
+            hx-swap="outerHTML">Click Me</button>
+        <button class="btn-green" hx-on="click: alert('clicked')">Alert Me</button>
+    </div>
+    <ul id="message">
+        <li>Initial message</li>
+    </ul>
+</body>
+</html>
